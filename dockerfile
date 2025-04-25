@@ -1,7 +1,7 @@
 # Part 1: Starting the Dockerfile for a Python application
 
 # Use the Python 3.9 Alpine image as the base for the container image
-FROM python:3.9-alpine
+FROM python:3.9-slim
 
 # Set the working directory inside the container to /.app
 WORKDIR /.app 
