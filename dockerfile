@@ -10,13 +10,10 @@ WORKDIR /.app
 COPY . $WORKDIR
 
 # Install the dependencies listed in the requirements.txt file
-RUN python -m pip install -r requirements.txt
+RUN pip install -r requirements.txt
 
 # Expose port 8000 to make the application accessible
 EXPOSE 8000
 
 
-
-
-
-
+ENTRYPOINT [ "python" , "manage.py" , "runserver"]
