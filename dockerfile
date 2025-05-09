@@ -16,4 +16,4 @@ RUN pip install -r requirements.txt
 EXPOSE 8000
 
 
-ENTRYPOINT [ "python" , "manage.py" , "runserver"]
+ENTRYPOINT [ "python" , "babyshop_app/manage.py" , "runserver"]
