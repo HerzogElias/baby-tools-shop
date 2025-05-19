@@ -10,6 +10,7 @@ WORKDIR /app
 COPY . .
 
 # Install the dependencies listed in the requirements.txt file
+# Install the Migration of your Server 
 RUN pip install -r requirements.txt
 RUN python manage.py migrate
 
