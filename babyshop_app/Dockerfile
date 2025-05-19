@@ -4,16 +4,18 @@
 FROM python:3.9-slim
 
 # Set the working directory inside the container to /.app
-WORKDIR /.app 
+WORKDIR /app 
 
 # Copy all files from the current directory to the working directory in the container
-COPY . $WORKDIR
+COPY . .
 
 # Install the dependencies listed in the requirements.txt file
 RUN pip install -r requirements.txt
+RUN python manage.py migrate
+
 
 # Expose port 8000 to make the application accessible
 EXPOSE 8000
 
 
-ENTRYPOINT [ "python" , "babyshop_app/manage.py" , "runserver"]
+ENTRYPOINT [ "python" , "manage.py" , "runserver" ,"0.0.0.0:8000"]
