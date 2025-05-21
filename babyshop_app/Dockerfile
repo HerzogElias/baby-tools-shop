@@ -12,7 +12,6 @@ COPY . .
 RUN pip install -r requirements.txt
 RUN python manage.py migrate
 
-
 # Expose port 8000 to make the application accessible
 EXPOSE 8000
 

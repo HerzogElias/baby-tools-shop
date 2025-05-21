@@ -3,15 +3,13 @@
 ## Table of Contents
 1. [Introduction](#Introduction)
 2. [Prerequisites](#Prerequisites)
-3. [Technologies](#Technologies)
-4. [Usage](#Usage)  
+3. [Quickstart](#Quickstart)  
    - [Clone GitHub Repository](#Clone-github-Resposiroty)  
    - [Build Docker Image](#Build-Dockerimage)  
+4. [Usage](#Usage)
+   - [Creating-Superuser](#Creating-Superuser)  
    - [Hints](#Hints)
    - [Photos](#Photos)
-
-
-
 
 ## Introduction 
 This is a Readme Description of our Baby-Tools-Project. The Baby-Tools-Project is an Onlineshop for Babytools and Baby Clothes. 
@@ -23,8 +21,8 @@ To Deploy your Baby-Tools-Shop, you need the following:
 - Docker 
 
 ## Quickstart
-### Clone-github-Resposiroty  
-1. Clone the follow github repository on your VServer. 
+### Clone-github-Repository  
+1. Clone the following Github Repository on your VServer. 
     ```
     https://github.com/HerzogElias/baby-tools-shop/
     ```
@@ -38,7 +36,6 @@ To Deploy your Baby-Tools-Shop, you need the following:
     ```
     docker run -it --rm --name babytoolsshop -p 8025:8000 babyshopp_app
     ```
-
 ## Usage 
 
 ### Creating-Superuser
@@ -55,11 +52,10 @@ To Deploy your Baby-Tools-Shop, you need the following:
 
 3. Navigate to Django Admin Panel and Log in with your Created Superuser Account. 
     ```
-    <your-ip>/admin
+    <localhost>/admin
     ```
 
 ### Hints
-
 This section will cover some hot tips when trying to interacting with this repository:
 
 - Settings & Configuration for Django can be found in `babyshop_app/babyshop/settings.py`
