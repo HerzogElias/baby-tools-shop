@@ -1,6 +1,4 @@
-# Part 1: Starting the Dockerfile for a Python application
-
-# Use the Python 3.9 Alpine image as the base for the container image
+# Use the Python 3.9 Slim image as the base for the container image
 FROM python:3.9-slim
 
 # Set the working directory inside the container to /.app
@@ -18,5 +16,5 @@ RUN python manage.py migrate
 # Expose port 8000 to make the application accessible
 EXPOSE 8000
 
-
 ENTRYPOINT [ "python" , "manage.py" , "runserver" ,"0.0.0.0:8000"]
+

@@ -17,24 +17,17 @@
 This is a Readme Description of our Baby-Tools-Project. The Baby-Tools-Project is an Onlineshop for Babytools and Baby Clothes. 
 
 ## Prerequisites
-To Deploy your Baby-Tools-Shop, you need a VServer with Ubuntu. 
-
-
-### TECHNOLOGIES
+To Deploy your Baby-Tools-Shop, you need the following: 
+- VServer with Ubuntu
 - Python 3.9
-- Django 4.0.2
-- Venv
+- Docker 
 
-
-
-## Usage 
-
+## Quickstart
 ### Clone-github-Resposiroty  
 1. Clone the follow github repository on your VServer. 
     ```
     https://github.com/HerzogElias/baby-tools-shop/
     ```
-
 ### Build-Dockerimage 
 1.  Build your Docker Image 
     ```
@@ -46,7 +39,24 @@ To Deploy your Baby-Tools-Shop, you need a VServer with Ubuntu.
     docker run -it --rm --name babytoolsshop -p 8025:8000 babyshopp_app
     ```
 
+## Usage 
 
+### Creating-Superuser
+1. Go to Docker exec in your Docker Container with 
+    ```
+        docker exec <container-id> bin/bash
+    ```
+
+2. Create a new Superuser for Django Admin Panel: 
+    ```
+    python manage.py createsuperuser
+    ```
+    Added a username and a safty password and safe. 
+
+3. Navigate to Django Admin Panel and Log in with your Created Superuser Account. 
+    ```
+    <your-ip>/admin
+    ```
 
 ### Hints
 
@@ -76,4 +86,4 @@ This section will cover some hot tips when trying to interacting with this repos
 
 ##### Login Page
 
-<img alt="" src="https://github.com/MET-DEV/Django-E-Commerce/blob/master/project_images/capture_202203230810
+<img alt="" src="https://github.com/MET-DEV/Django-E-Commerce/blob/master/project_images/capture_202203230810"> </img>
